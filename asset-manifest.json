@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/hackillinois-test/static/css/main.8a48d92e.chunk.css",
+    "main.js": "/hackillinois-test/static/js/main.e9233323.chunk.js",
+    "main.js.map": "/hackillinois-test/static/js/main.e9233323.chunk.js.map",
+    "runtime~main.js": "/hackillinois-test/static/js/runtime~main.c9e24536.js",
+    "runtime~main.js.map": "/hackillinois-test/static/js/runtime~main.c9e24536.js.map",
+    "static/js/2.64980e9e.chunk.js": "/hackillinois-test/static/js/2.64980e9e.chunk.js",
+    "static/js/2.64980e9e.chunk.js.map": "/hackillinois-test/static/js/2.64980e9e.chunk.js.map",
+    "index.html": "/hackillinois-test/index.html",
+    "precache-manifest.246744f2c65c2ff172f7d72b5848c8cf.js": "/hackillinois-test/precache-manifest.246744f2c65c2ff172f7d72b5848c8cf.js",
+    "service-worker.js": "/hackillinois-test/service-worker.js",
+    "static/css/main.8a48d92e.chunk.css.map": "/hackillinois-test/static/css/main.8a48d92e.chunk.css.map",
+    "static/media/hackillinois_logo.png": "/hackillinois-test/static/media/hackillinois_logo.275016af.png",
+    "static/media/race_car.webp": "/hackillinois-test/static/media/race_car.83cba05a.webp"
+  }
+}
