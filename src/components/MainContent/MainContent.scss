@@ -1,11 +1,50 @@
 .main-content{
 	height:100%;
 	width:75%;
+	position:absolute;
+	right:0;
 	background:#e3ebff;
 	padding:28px 80px;
+	overflow: scroll;
+	&::-webkit-scrollbar {
+		width: 0 !important;
+   }	
 	#heading{
 		font-size:44px;
 		font-weight: 700;
 		padding:44px 0px;
+	}
+	.info-box{
+		background:#FFFFFF;
+		width:100%;
+		padding:44px 70px;
+		h2{
+			color:#EB108B;
+			font-weight:bold;
+			font-size:28px;
+			margin-bottom:40px;
+		}
+		.info{
+			display:flex;
+			div{
+				height:112px;
+				padding:28px 20px;
+				font-weight:600;
+				width:33.33%;
+			}
+			.time{
+				font-size:14px;
+				border-right:solid #EB108B 1px;
+			}
+			.title-location{
+				font-size:18px;
+				width:33.33%;
+				#location{
+					margin-top:4px;
+					font-weight:normal;
+					font-size:80%;
+				}
+			}
+		}
 	}
 }

@@ -10,15 +10,32 @@ const MainContent = () => {
         })
     }, 0);
 
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-
-    let boxes = [{title:"Friday",events:[{time:'32',title:'gererdgf',location:'verjbiu'}]}];
+    const eventsArr = events.map((event, i, arr) => {
+        const tTemp = new Date(event.startTime);
+        const tTemp1 = tTemp.toLocaleTimeString().split('').slice();
+        const time = tTemp.toLocaleTimeString().split('').slice(0, 4).join('') + tTemp1.splice(7, 3).join('')
+        console.log(time);
+        return (
+            <div className="info">
+                <div className="time">
+                    <p>{time}</p>
+                </div>
+                <div className="title-location">
+                    <p>{event.description}</p>
+                    <p id="location">{event.locations[0].description}</p>
+                </div>
+            </div>
+        )
+    })
 
 
     return (
         <div className="main-content">
             <h1 id="heading">Schedule</h1>
-            {/* {eventsArr} */}
+            <div className="info-box">
+                <h2>Monday</h2>
+                {eventsArr}
+            </div>
         </div>
     )
 }
