@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MainContent.scss';
 import car from './../../assets/race_car.webp';
+import direction from './../../assets/direction.jpg';
 
 const MainContent = () => {
     const [events, setEvents] = useState([]); //array intialization
@@ -36,7 +37,7 @@ const MainContent = () => {
                 </div>
                 <div className="title-location">
                     <p>{event.description}</p>
-                    <a id="location" href={`http://maps.google.com/maps?daddr=${event.locations[0].description}`} target="_blank">{event.locations[0].description}</a>
+                    <a id="location" href={`http://maps.google.com/maps?daddr=${event.locations[0].description}`} target="_blank">{event.locations[0].description} <img src={direction} alt="direction icon"/></a>
                 </div>
             </div>
         )
