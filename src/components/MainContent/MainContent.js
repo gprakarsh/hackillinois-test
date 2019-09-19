@@ -14,13 +14,14 @@ const MainContent = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', (event) => {
-            console.log(document.onscroll)    
+            console.log(document.onscroll)
         })
         console.log('hit')
-    },[])
+    }, [])
 
 
-    events.sort((a, b) => {                  //sorting fetched data based on time
+    events.sort((a, b) => {
+
         return a.startTime - b.startTime
     })
 
@@ -30,6 +31,9 @@ const MainContent = () => {
         tTemp1 = tTemp1[tTemp1.length - 1].split(' ')[1];
         console.log(tTemp1);
         const time = tTemp.toLocaleTimeString().split(':').slice(0, 2).join(':') + ' ' + tTemp1;
+        if(arr[i-1] && event.startTime === arr[i-1].startTime){
+            return;
+        }
         return (
             <div className="info" key={i}>
                 <div className="time">
@@ -37,8 +41,15 @@ const MainContent = () => {
                 </div>
                 <div className="title-location">
                     <p>{event.description}</p>
-                    <a id="location" href={`http://maps.google.com/maps?daddr=${event.locations[0].description}`} target="_blank">{event.locations[0].description} <img src={direction} alt="direction icon"/></a>
+                    <a id="location" href={`http://maps.google.com/maps?daddr=${event.locations[0].description}`} target="_blank">{event.locations[0].description} <img src={direction} alt="direction icon" /></a>
                 </div>
+                {
+                    arr[i+1] && event.startTime === arr[i + 1].startTime 
+                    && <div className='extra-slot'>
+                        <p>{arr[i+1].description}</p>
+                        <a id="location" href={`http://maps.google.com/maps?daddr=${arr[i+1].locations[0].description}`} target="_blank">{arr[i+1].locations[0].description} <img src={direction} alt="direction icon" /></a>
+                    </div>
+                }
             </div>
         )
     })
