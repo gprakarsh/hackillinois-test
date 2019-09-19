@@ -5,7 +5,6 @@ import './SideNav.scss';
 const SideNav = () => {
     return (
         <div className="side-nav">
-            {console.log("hit")}
             <img id="logo" src={logo} alt="hackillinois-logo" />
             <ul className="side-nav-items">
                 <li>Schedule</li>

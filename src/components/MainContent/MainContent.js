@@ -8,15 +8,18 @@ const MainContent = () => {
         axios.get(`https://api.hackillinois.org/event/`).then((eTemp) => {
             setEvents(eTemp.data.events)
         })
-    }, 0);
+    }, []);
+
+    events.sort((a,b)=>{
+        return a.startTime-b.startTime
+    })
 
     const eventsArr = events.map((event, i, arr) => {
         const tTemp = new Date(event.startTime);
         const tTemp1 = tTemp.toLocaleTimeString().split('').slice();
         const time = tTemp.toLocaleTimeString().split('').slice(0, 4).join('') + tTemp1.splice(7, 3).join('')
-        console.log(time);
         return (
-            <div className="info">
+            <div className="info" key={i}>
                 <div className="time">
                     <p>{time}</p>
                 </div>
