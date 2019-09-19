@@ -36,7 +36,7 @@ const MainContent = () => {
                 </div>
                 <div className="title-location">
                     <p>{event.description}</p>
-                    <p id="location">{event.locations[0].description}</p>
+                    <a href={`http://maps.google.com/maps?daddr=${event.locations[0].description}`} target="_blank">{event.locations[0].description}</a>
                 </div>
             </div>
         )
