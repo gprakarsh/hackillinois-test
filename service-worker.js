@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hackillinois-test/precache-manifest.246744f2c65c2ff172f7d72b5848c8cf.js"
+  "/hackillinois-test/precache-manifest.4e1958bf20d0c0763a90d4258f90a42b.js"
 );
 
 self.addEventListener('message', (event) => {
